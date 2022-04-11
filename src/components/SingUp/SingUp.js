@@ -33,10 +33,10 @@ const SingUp = () => {
 
     const handleCreateUser = event => {
         event.preventDefault();
-        // if (password !== confirmPassword) {
-        //     setError('your two password do not match')
-        //     return;
-        // }
+        if (password !== confirmPassword) {
+            setError('your two password do not match')
+            return;
+        }
         createUserWithEmailAndPassword(email, password)
             .then('user created')
     }
